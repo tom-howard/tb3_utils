@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Toggling Wifi adaptor: $1"
+
+echo "Taking WiFi down..."
+sudo ifconfig $1 down
+
+echo "Bringing WiFi back up..."
+sudo ifconfig $1 up
+
+echo "Obtaining IP address..."
+sudo dhclient $1
+
+echo "Done."
+iwlist $1 channel | grep "Current Frequency:"
