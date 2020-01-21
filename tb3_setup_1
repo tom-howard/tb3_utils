@@ -1,0 +1,13 @@
+#! /bin/bash
+
+echo "update hostname to match the current device:"
+sleep 2
+sudo nano /etc/hostname
+
+echo "update hosts to match the current device:"
+sleep 2
+sudo nano /etc/hosts
+
+echo "rebooting..."
+sleep 5
+sudo reboot
