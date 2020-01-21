@@ -4,11 +4,10 @@ echo "Make sure OpenCR board is connected... (enter to continue)"
 
 read opencr
 
-cd ~
-
 export OPENCR_PORT=/dev/ttyACM0
 export OPENCR_MODEL=waffle
 
 rm -rf ./opencr_update.tar.bz2
 
+cd ~
 wget https://github.com/ROBOTIS-GIT/OpenCR-Binaries/raw/master/turtlebot3/ROS1/latest/opencr_update.tar.bz2 && tar -xvf opencr_update.tar.bz2 && cd ./opencr_update && ./update.sh $OPENCR_PORT $OPENCR_MODEL.opencr && cd ..
