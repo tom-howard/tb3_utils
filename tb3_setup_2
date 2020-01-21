@@ -1,0 +1,27 @@
+#! /bin/bash
+
+echo "installing ntpdate..."
+
+sudo apt-get install ntpdate
+
+echo "fetching toggle_wifi tool..."
+
+cd ~/bin/
+
+wget https://raw.githubusercontent.com/tom-howard/tb3_utils/master/toggle_wifi
+
+echo "fetching tb3_setup_3..."
+
+wget https://raw.githubusercontent.com/tom-howard/tb3_utils/master/tb3_setup_3
+
+echo "setting permissions..."
+
+chmod +x tb3_setup_3 toggle_wifi
+
+echo "synchronising to ntp server..."
+
+sudo ntpdate ntp.ubuntu.com
+
+echo "launching tb3_setup_3..."
+
+tb3_setup_3
