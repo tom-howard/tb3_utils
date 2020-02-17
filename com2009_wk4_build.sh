@@ -15,6 +15,7 @@ mv wk04_ROS_Services.ipynb ~/notebook_ws/wk04_ROS_Services.ipynb
 mkdir ~/notebook_ws/past_weeks/
 cd ~/notebook_ws/past_weeks/
 git clone https://github.com/tom-howard/COM2009_WK02.git
+git clone https://github.com/tom-howard/COM2009_WK03.git
 mkdir ~/notebook_ws/past_weeks/COM2009_WK02/past_weeks/
 cd ~/notebook_ws/past_weeks/COM2009_WK02/past_weeks/
 git clone https://github.com/tom-howard/COM2009_WK01.git
